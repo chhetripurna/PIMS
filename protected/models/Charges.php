@@ -36,7 +36,7 @@ class Charges extends CActiveRecord
 			array('amount', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('chargeID, billingID, item, amount', 'safe', 'on'=>'search'),
+			array('billingID, item, amount', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,8 +58,8 @@ class Charges extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'chargeID' => 'Charge',
-			'billingID' => 'Billing',
+			'chargeID' => 'ChargeID',
+			'billingID' => 'BillingID',
 			'item' => 'Item',
 			'amount' => 'Amount',
 		);
@@ -83,7 +83,6 @@ class Charges extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('chargeID',$this->chargeID,true);
 		$criteria->compare('billingID',$this->billingID,true);
 		$criteria->compare('item',$this->item,true);
 		$criteria->compare('amount',$this->amount,true);

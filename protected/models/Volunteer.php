@@ -38,7 +38,7 @@ class Volunteer extends CActiveRecord
 			array('suffix', 'length', 'max'=>16),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('volunteerID, firstName, middleName, lastName, suffix, loginName', 'safe', 'on'=>'search'),
+			array('firstName, middleName, lastName, loginName', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +60,7 @@ class Volunteer extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'volunteerID' => 'Volunteer',
+			'volunteerID' => 'VolunteerID',
 			'firstName' => 'First Name',
 			'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -87,11 +87,9 @@ class Volunteer extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('volunteerID',$this->volunteerID,true);
 		$criteria->compare('firstName',$this->firstName,true);
 		$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
-		$criteria->compare('suffix',$this->suffix,true);
 		$criteria->compare('loginName',$this->loginName,true);
 
 		return new CActiveDataProvider($this, array(

@@ -38,7 +38,7 @@ class Login extends CActiveRecord
 			array('userType', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('loginName, password, userType', 'safe', 'on'=>'search'),
+			array('loginName, userType', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -88,7 +88,6 @@ class Login extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('loginName',$this->loginName,true);
-		$criteria->compare('password',$this->password,true);
 		$criteria->compare('userType',$this->userType,true);
 
 		return new CActiveDataProvider($this, array(

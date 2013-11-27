@@ -40,7 +40,7 @@ class OfficeStaff extends CActiveRecord
 			array('type', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('officeID, firstName, middleName, lastName, suffix, type, loginName', 'safe', 'on'=>'search'),
+			array('officeID, firstName, middleName, lastName, type, loginName', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,7 +62,7 @@ class OfficeStaff extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'officeID' => 'Office',
+			'officeID' => 'OfficeID',
 			'firstName' => 'First Name',
 			'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -94,7 +94,6 @@ class OfficeStaff extends CActiveRecord
 		$criteria->compare('firstName',$this->firstName,true);
 		$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
-		$criteria->compare('suffix',$this->suffix,true);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('loginName',$this->loginName,true);
 

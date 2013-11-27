@@ -40,7 +40,7 @@ class MedicNotes extends CActiveRecord
 			array('medicID', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('noteID, patientID, visitID, note, medicID', 'safe', 'on'=>'search'),
+			array('patientID, visitID, medicID', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +64,11 @@ class MedicNotes extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'noteID' => 'Note',
-			'patientID' => 'Patient',
-			'visitID' => 'Visit',
+			'noteID' => 'NoteID',
+			'patientID' => 'PatientID',
+			'visitID' => 'VisitID',
 			'note' => 'Note',
-			'medicID' => 'Medic',
+			'medicID' => 'MedicID',
 		);
 	}
 
@@ -90,10 +90,8 @@ class MedicNotes extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('noteID',$this->noteID,true);
 		$criteria->compare('patientID',$this->patientID,true);
 		$criteria->compare('visitID',$this->visitID,true);
-		$criteria->compare('note',$this->note,true);
 		$criteria->compare('medicID',$this->medicID,true);
 
 		return new CActiveDataProvider($this, array(

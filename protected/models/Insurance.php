@@ -37,7 +37,7 @@ class Insurance extends CActiveRecord
 			array('accountNum', 'length', 'max'=>16),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('insuranceID, patientID, provider, accountNum, groupNum', 'safe', 'on'=>'search'),
+			array('patientID, provider, accountNum, groupNum', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,11 +59,11 @@ class Insurance extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'insuranceID' => 'Insurance',
-			'patientID' => 'Patient',
+			'insuranceID' => 'InsuranceID',
+			'patientID' => 'PatientID',
 			'provider' => 'Provider',
-			'accountNum' => 'Account Num',
-			'groupNum' => 'Group Num',
+			'accountNum' => 'Account Number',
+			'groupNum' => 'Group Number',
 		);
 	}
 
@@ -85,7 +85,6 @@ class Insurance extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('insuranceID',$this->insuranceID,true);
 		$criteria->compare('patientID',$this->patientID,true);
 		$criteria->compare('provider',$this->provider,true);
 		$criteria->compare('accountNum',$this->accountNum,true);

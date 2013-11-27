@@ -58,7 +58,7 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=Pims',
 			'emulatePrepare' => true,
-			'username' => 'root',
+			'username' => 'pims',
 			'password' => 'password',
 			'charset' => 'utf8',
 		),

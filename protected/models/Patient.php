@@ -62,7 +62,7 @@ class Patient extends CActiveRecord
 			array('contact1Name, contact2Name, familyDoctor', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('patientID, firstName, middleName, lastName, suffix, DOB, street, city, state, zipCode, homePhone, workPhone, cellPhone, contact1Name, contact1Num, contact2Name, contact2Num, familyDoctor', 'safe', 'on'=>'search'),
+			array('patientID, firstName, middleName, lastName, DOB, city, state, zipCode, homePhone, workPhone, cellPhone, familyDoctor', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,12 +90,12 @@ class Patient extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'patientID' => 'Patient',
+			'patientID' => 'PatientID',
 			'firstName' => 'First Name',
 			'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
 			'suffix' => 'Suffix',
-			'DOB' => 'Dob',
+			'DOB' => 'Date of Birth',
 			'street' => 'Street',
 			'city' => 'City',
 			'state' => 'State',
@@ -103,10 +103,10 @@ class Patient extends CActiveRecord
 			'homePhone' => 'Home Phone',
 			'workPhone' => 'Work Phone',
 			'cellPhone' => 'Cell Phone',
-			'contact1Name' => 'Contact1 Name',
-			'contact1Num' => 'Contact1 Num',
-			'contact2Name' => 'Contact2 Name',
-			'contact2Num' => 'Contact2 Num',
+			'contact1Name' => 'First Contact Name',
+			'contact1Num' => 'First Contact Num',
+			'contact2Name' => 'Second Contact Name',
+			'contact2Num' => 'Second Contact Num',
 			'familyDoctor' => 'Family Doctor',
 		);
 	}
@@ -133,19 +133,13 @@ class Patient extends CActiveRecord
 		$criteria->compare('firstName',$this->firstName,true);
 		$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
-		$criteria->compare('suffix',$this->suffix,true);
 		$criteria->compare('DOB',$this->DOB,true);
-		$criteria->compare('street',$this->street,true);
 		$criteria->compare('city',$this->city,true);
 		$criteria->compare('state',$this->state,true);
 		$criteria->compare('zipCode',$this->zipCode,true);
 		$criteria->compare('homePhone',$this->homePhone,true);
 		$criteria->compare('workPhone',$this->workPhone,true);
 		$criteria->compare('cellPhone',$this->cellPhone,true);
-		$criteria->compare('contact1Name',$this->contact1Name,true);
-		$criteria->compare('contact1Num',$this->contact1Num,true);
-		$criteria->compare('contact2Name',$this->contact2Name,true);
-		$criteria->compare('contact2Num',$this->contact2Num,true);
 		$criteria->compare('familyDoctor',$this->familyDoctor,true);
 
 		return new CActiveDataProvider($this, array(

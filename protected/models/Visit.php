@@ -50,7 +50,7 @@ class Visit extends CActiveRecord
 			array('dischargeDate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('visitID, patientID, admitDate, dischargeDate, admitReason, facility, floor, roomNum, bedNum, visitors', 'safe', 'on'=>'search'),
+			array('visitID, patientID, admitDate, dischargeDate, facility, floor, roomNum, bedNum', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,8 +77,8 @@ class Visit extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'visitID' => 'Visit',
-			'patientID' => 'Patient',
+			'visitID' => 'VisitID',
+			'patientID' => 'PatientID',
 			'admitDate' => 'Admit Date',
 			'dischargeDate' => 'Discharge Date',
 			'admitReason' => 'Admit Reason',
@@ -112,12 +112,10 @@ class Visit extends CActiveRecord
 		$criteria->compare('patientID',$this->patientID,true);
 		$criteria->compare('admitDate',$this->admitDate,true);
 		$criteria->compare('dischargeDate',$this->dischargeDate,true);
-		$criteria->compare('admitReason',$this->admitReason,true);
 		$criteria->compare('facility',$this->facility,true);
 		$criteria->compare('floor',$this->floor);
 		$criteria->compare('roomNum',$this->roomNum);
 		$criteria->compare('bedNum',$this->bedNum);
-		$criteria->compare('visitors',$this->visitors,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -40,7 +40,7 @@ class Prescription extends CActiveRecord
 			array('doctorID', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('noteID, patientID, visitID, prescriptions, doctorID', 'safe', 'on'=>'search'),
+			array('patientID, visitID, doctorID', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,11 +64,11 @@ class Prescription extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'noteID' => 'Note',
-			'patientID' => 'Patient',
-			'visitID' => 'Visit',
+			'noteID' => 'NoteID',
+			'patientID' => 'PatientID',
+			'visitID' => 'VisitID',
 			'prescriptions' => 'Prescriptions',
-			'doctorID' => 'Doctor',
+			'doctorID' => 'DoctorID',
 		);
 	}
 
@@ -90,10 +90,8 @@ class Prescription extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('noteID',$this->noteID,true);
 		$criteria->compare('patientID',$this->patientID,true);
 		$criteria->compare('visitID',$this->visitID,true);
-		$criteria->compare('prescriptions',$this->prescriptions,true);
 		$criteria->compare('doctorID',$this->doctorID,true);
 
 		return new CActiveDataProvider($this, array(

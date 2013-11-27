@@ -43,7 +43,7 @@ class Doctor extends CActiveRecord
 			array('specialization', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('doctorID, firstName, middleName, lastName, suffix, specialization, loginName', 'safe', 'on'=>'search'),
+			array('doctorID, firstName, middleName, lastName, specialization, loginName', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,7 +68,7 @@ class Doctor extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'doctorID' => 'Doctor',
+			'doctorID' => 'DoctorID',
 			'firstName' => 'First Name',
 			'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -100,7 +100,6 @@ class Doctor extends CActiveRecord
 		$criteria->compare('firstName',$this->firstName,true);
 		$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
-		$criteria->compare('suffix',$this->suffix,true);
 		$criteria->compare('specialization',$this->specialization,true);
 		$criteria->compare('loginName',$this->loginName,true);
 

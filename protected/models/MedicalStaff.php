@@ -41,7 +41,7 @@ class MedicalStaff extends CActiveRecord
 			array('type', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('medicID, firstName, middleName, lastName, suffix, type, loginName', 'safe', 'on'=>'search'),
+			array('medicID, firstName, middleName, lastName, type, loginName', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +64,7 @@ class MedicalStaff extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'medicID' => 'Medic',
+			'medicID' => 'MedicID',
 			'firstName' => 'First Name',
 			'middleName' => 'Middle Name',
 			'lastName' => 'Last Name',
@@ -96,7 +96,6 @@ class MedicalStaff extends CActiveRecord
 		$criteria->compare('firstName',$this->firstName,true);
 		$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
-		$criteria->compare('suffix',$this->suffix,true);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('loginName',$this->loginName,true);
 
