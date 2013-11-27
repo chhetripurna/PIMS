@@ -1,14 +1,14 @@
-INSERT INTO Pims.Login VALUES ('OMM0000','OMyao/at64nVk','D');
-INSERT INTO Pims.Doctor VALUES ('D000000', 'Otto', 'Matthias', 'Montague', '', 'Underwater basketweaver', 'OMM0000');
+INSERT INTO Pims.Login VALUES ('demoDoc','deQcvEr1PRPSM','D');
+INSERT INTO Pims.Doctor VALUES ('D000000', 'Otto', 'Matthias', 'Montague', '', 'Underwater basketweaver', 'demoDoc');
 
-INSERT INTO Pims.Login VALUES ('CCH0050','CC1pSQMFkUSCo','M');
-INSERT INTO Pims.MedicalStaff VALUES ('M000000', 'Cedric', 'Corey', 'Harry', '', 'Phlebotomist', 'CCH0050');
+INSERT INTO Pims.Login VALUES ('demoMed','deQcvEr1PRPSM','M');
+INSERT INTO Pims.MedicalStaff VALUES ('M000000', 'Cedric', 'Corey', 'Harry', '', 'Phlebotomist', 'demoMed');
 
-INSERT INTO Pims.Login VALUES ('DLR0150','DL.xDJgABf8vc','O');
-INSERT INTO Pims.OfficeStaff VALUES ('O000000', 'Diego', 'Luke', 'Rodriguez', '', 'Secretary', 'DLR0150');
+INSERT INTO Pims.Login VALUES ('demoOff','deQcvEr1PRPSM','O');
+INSERT INTO Pims.OfficeStaff VALUES ('O000000', 'Diego', 'Luke', 'Rodriguez', '', 'Secretary', 'demoOff');
 
-INSERT INTO Pims.Login VALUES ('PSC0257','PSL1o1zMHdUNY','V');
-INSERT INTO Pims.Volunteer VALUES ('V000007', 'Patrick', 'Shaun', 'Capulet', '', 'PSC0257');
+INSERT INTO Pims.Login VALUES ('demoVol','deQcvEr1PRPSM','V');
+INSERT INTO Pims.Volunteer VALUES ('V000007', 'Patrick', 'Shaun', 'Capulet', '', 'demoVol');
 
 INSERT INTO Pims.Patient VALUES ('00000000', 'Edward', 'Luke', 'Howard', '', '1939-04-16', '7623 Main St.', 'Anytown', 'AL', '12345', '2565559702', '2565556253', '2565550246', 'Joseph Roberts', '2565550639', 'Santiago Ward', '2565559783', 'Jack Kevorkian');
 
