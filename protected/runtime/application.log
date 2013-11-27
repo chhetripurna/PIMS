@@ -1,0 +1,191 @@
+2013/11/26 21:36:58 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /home/nick/Web/yii/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /home/nick/Web/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#7 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#8 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#9 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /home/nick/Web/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /home/nick/Web/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#12 /home/nick/Web/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 /home/nick/Web/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#15 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#16 /home/nick/Web/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#17 /home/nick/Web/yii/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/Pims/index.php?r=gii/default/login
+---
+2013/11/26 21:37:13 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/web/CClientScript.php(510): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/web/CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 /home/nick/Web/yii/framework/web/CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 /home/nick/Web/yii/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /home/nick/Web/yii/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /home/nick/Web/yii/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html ...')
+#8 /home/nick/Web/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Pims/index.php?r=site/login
+HTTP_REFERER=http://localhost/Pims/
+---
+2013/11/26 21:40:21 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/web/CClientScript.php(510): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/web/CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 /home/nick/Web/yii/framework/web/CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 /home/nick/Web/yii/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /home/nick/Web/yii/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#7 /home/nick/Web/yii/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html ...')
+#8 /home/nick/Web/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#10 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('contact')
+#14 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#15 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Pims/index.php?r=site/contact
+HTTP_REFERER=http://localhost/Pims/index.php?r=site/page&view=about
+---
+2013/11/26 21:40:35 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /home/nick/Web/yii/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /home/nick/Web/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#7 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#8 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#9 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /home/nick/Web/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /home/nick/Web/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#12 /home/nick/Web/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 /home/nick/Web/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#15 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#16 /home/nick/Web/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#17 /home/nick/Web/yii/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/Pims/index.php?r=gii/default/login
+---
+2013/11/26 21:41:58 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /home/nick/Web/yii/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /home/nick/Web/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#7 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#8 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#9 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /home/nick/Web/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /home/nick/Web/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#12 /home/nick/Web/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 /home/nick/Web/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#15 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#16 /home/nick/Web/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#17 /home/nick/Web/yii/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/Pims/index.php?r=gii/default/login
+---
+2013/11/26 21:43:14 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/nick/Web/docRoot/Pims/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/nick/Web/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/nick/Web/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/nick/Web/...')
+#1 /home/nick/Web/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/nick/Web/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/nick/Web/...')
+#3 /home/nick/Web/yii/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /home/nick/Web/yii/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /home/nick/Web/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#7 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#8 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#9 /home/nick/Web/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /home/nick/Web/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /home/nick/Web/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#12 /home/nick/Web/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#13 /home/nick/Web/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/nick/Web/yii/framework/web/CBaseController.php(126): require('/home/nick/Web/...')
+#15 /home/nick/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/nick/Web/...', Array, true)
+#16 /home/nick/Web/yii/framework/web/CController.php(784): CBaseController->renderFile('/home/nick/Web/...', Array, true)
+#17 /home/nick/Web/yii/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/Pims/index.php/gii/default/login
+---
+2013/11/26 22:30:03 [error] [exception.CException] exception 'CException' with message 'Property "Login.id" is not defined.' in /home/nick/Web/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/nick/Web/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id')
+#1 /home/nick/Web/protected/components/UserIdentity.php(21): CActiveRecord->__get('id')
+#2 /home/nick/Web/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /home/nick/Web/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /home/nick/Web/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /home/nick/Web/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /home/nick/Web/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /home/nick/Web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /home/nick/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/nick/Web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/nick/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/nick/Web/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /home/nick/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /home/nick/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/nick/Web/docRoot/Pims/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Pims/index.php/site/login
+HTTP_REFERER=http://localhost/Pims/index.php/site/login
+---

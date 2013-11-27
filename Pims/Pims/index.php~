@@ -1,0 +1,12 @@
+<?php
+echo "Doctor\n       ";
+echo crypt('password', 'OMM0000');
+echo "      \n\nMedical Staff\n      ";
+echo crypt('password', 'CCH0050');
+echo "      <p>Office Staff</p>     ";
+echo crypt('password', 'DLR0150');
+echo "     \n\nVolunteer\n      ";
+echo crypt('password', 'PSC0257');
+
+
+?>
