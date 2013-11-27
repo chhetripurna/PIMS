@@ -14,7 +14,9 @@ class UserIdentity extends CUserIdentity
         $record=Login::model()->findByAttributes(array('loginName'=>$this->username));
         if($record===null)
             $this->errorCode=self::ERROR_USERNAME_INVALID;
-        else if($record->password!==crypt($this->password, $this->username))
+        else if($record->password!==crypt($this->password, 'de'))
+        	// crypt salt should be a random string. Its 'de' so we can easily get
+        	// all users to log in.
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
         {
