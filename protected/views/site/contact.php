@@ -18,12 +18,11 @@ $this->breadcrumbs=array(
 </div>
 
 <?php else: ?>
-
 <p>
 If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
 </p>
 
-<div class="form">
+<div class="contactForm">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'contact-form',
@@ -38,25 +37,25 @@ If you have business inquiries or other questions, please fill out the following
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->labelEx($model,'name'); ?><br>
 		<?php echo $form->textField($model,'name'); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->labelEx($model,'email'); ?><br>
 		<?php echo $form->textField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'subject'); ?>
+		<?php echo $form->labelEx($model,'subject'); ?><br>
 		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'subject'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
+		<?php echo $form->labelEx($model,'body'); ?><br>
 		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'body'); ?>
 	</div>
@@ -80,6 +79,6 @@ If you have business inquiries or other questions, please fill out the following
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div><!-- contactForm -->
 
 <?php endif; ?>

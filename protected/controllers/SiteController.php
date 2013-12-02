@@ -21,6 +21,27 @@ class SiteController extends Controller
 		);
 	}
 
+	public function filters()
+	{
+		return array(
+			'accessControl',
+		);
+	}
+
+	/*public function accessRules()
+	{
+		return array(
+			array('allow',
+				'actions'=>array('admin'),
+				'roles'=>array('D','M','O','V'),
+			),
+			array('deny',
+				'users'=>array('*'),
+			),
+		);
+	}
+	*/
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -30,6 +51,69 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
+	}
+
+	/**
+	 * This is the 'patientInformation' action that is invoked
+	 * when the "load patient Information" is explicitly
+	 * requested by
+	 * users.
+	*/
+	public function actionPatientInformation($id)
+	{
+		//renders the view file 'protected/views/site/ 
+		//patientInformation.php'
+		//using the default layout 'protected/views/layouts/
+		//main.php'
+		$this->render('patientInformation',array('model'=>$this->loadPatient($id)
+		));
+	}
+
+	public function actionBilling($id)
+	{
+		$this->render('billing',array('model'=>$this->loadPatient($id)
+		));
+	}
+
+	public function actionTreatment($id)
+	{
+		$this->render('treatment',array('model'=>$this->loadPatient($id)
+		));
+	}
+
+	public function actionVisit($id)
+	{
+		$this->render('visit',array('model'=>$this->loadVisit($id)
+		));
+	}
+
+	public function actionSearch()
+	{
+		$model=new SearchForm;
+		 
+		if(isset($_POST['ajax']) && $_POST['ajax']==='search-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+		
+		if(isset($_POST['SearchForm']))
+		{
+			$model->attributes=$_POST['SearchForm'];
+			Yii::trace('In if isset', 'info');
+			if(!false)
+			{
+				$dataReader=$model->search();
+				Yii::trace('model->search returned true', 'info');
+				$this->render('results',array('result'=>$dataReader));
+				Yii::app()->end();
+			} else {
+				Yii::trace('model->search returns false.', 'info');
+			}
+			
+		}
+		// display the search form
+		$this->render('search',array('model'=>$model));
 	}
 
 	/**
@@ -45,6 +129,7 @@ class SiteController extends Controller
 				$this->render('error', $error);
 		}
 	}
+
 
 	/**
 	 * Displays the contact page
@@ -92,7 +177,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect(array('/site/search'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -106,4 +191,24 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	/**
+	 * For loading patient models
+	 */
+	public function loadPatient($id)
+	{
+		$model=Patient::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	public function loadVisit($id)
+	{
+		$model=Visit::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
 }

@@ -129,9 +129,9 @@ class Patient extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('patientID',$this->patientID,true);
+		//$criteria->compare('patientID',$this->patientID,true);
 		$criteria->compare('firstName',$this->firstName,true);
-		$criteria->compare('middleName',$this->middleName,true);
+		//$criteria->compare('middleName',$this->middleName,true);
 		$criteria->compare('lastName',$this->lastName,true);
 		$criteria->compare('DOB',$this->DOB,true);
 		$criteria->compare('city',$this->city,true);

@@ -2,29 +2,64 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
+	color: #FFF;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	background: #000055;
+	text-align: center;
+	
+}
+
+h1
+{
+	color: #FFF;
+}
+
+h3
+{
+	color: #FFF;
+	text-align: center;
+	text-decoration: bold;
+}
+
+a:link
+{
+	color: #DDD;
+	text-decoration:underline;
+}
+
+a:visited
+{
+	color: #DDD;
+	text-decoration:underline;
+}
+
+
+#menus
+{
+	color: #000;
+	text-align: center;
 }
 
 #page
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
-	border: 1px solid #C9E0ED;
+	background: #6699CC;
+	border: 1px solid #0033FF;
 }
 
 #header
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 3px solid #FFFFFF;
+	border-bottom: 3px solid #FFFFFF;
 }
 
 #content
 {
     padding: 20px;
+    color: #FFF;
 }
 
 #sidebar
@@ -38,18 +73,20 @@ body
 	margin: 10px 20px;
 	font-size: 0.8em;
 	text-align: center;
-	border-top: 1px solid #C9E0ED;
+	border-top: 1px solid #0033FF;
 }
 
 #logo
 {
-	padding: 10px 20px;
-	font-size: 200%;
+	background:#0040DD;
+	padding: 0px 40px;
+	font-size: 300%;
+	color:#FFFFFF;
 }
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	background:black url(bg.gif) repeat-x left top;
 }
 
 #mainmenu ul
@@ -65,18 +102,19 @@ body
 
 #mainmenu ul li a
 {
-	color:#ffffff;
+	color:#FFFFFF;
 	background-color:transparent;
 	font-size:12px;
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 8px;
+	text-align:left;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	color: #FFFFFF;
+	background-color:#000055;
 	text-decoration:none;
 }
 
@@ -89,7 +127,7 @@ div.flash-error, div.flash-notice, div.flash-success
 
 div.flash-error
 {
-	background:#FBE3E4;
+	background:#0033FF;
 	color:#8a1f11;
 	border-color:#FBC2C4;
 }
@@ -132,7 +170,7 @@ div.view
 {
 	padding: 10px;
 	margin: 10px 0;
-	border: 1px solid #C9E0ED;
+	border: 1px solid #00CCEE;
 }
 
 div.breadcrumbs
@@ -161,7 +199,7 @@ div.search-form
 .portlet-decoration
 {
 	padding: 3px 8px;
-	background: #B7D6E7;
+	background: #00CCEE;
 	border-left: 5px solid #6FACCF;
 }
 
@@ -179,7 +217,7 @@ div.search-form
 	font-size:0.9em;
 	margin: 0 0 15px 0;
 	padding: 5px 8px;
-	background:#EFFDFF;
+	background:#00CCEE;
 }
 
 .portlet-content ul

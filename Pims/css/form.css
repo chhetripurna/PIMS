@@ -38,6 +38,11 @@ div.form
 {
 }
 
+div.contactForm
+{
+	text-align: left;
+}
+
 div.form input,
 div.form textarea,
 div.form select

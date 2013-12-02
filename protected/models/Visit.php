@@ -62,7 +62,7 @@ class Visit extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'billings' => array(self::HAS_MANY, 'Billing', 'visitID'),
+			'billings' => array(self::HAS_ONE, 'Billing', 'visitID'),
 			'docNotes' => array(self::HAS_MANY, 'DocNotes', 'visitID'),
 			'medicNotes' => array(self::HAS_MANY, 'MedicNotes', 'visitID'),
 			'prescriptions' => array(self::HAS_MANY, 'Prescription', 'visitID'),
