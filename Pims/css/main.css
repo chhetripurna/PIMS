@@ -33,6 +33,11 @@ a:visited
 	text-decoration:underline;
 }
 
+td
+{
+	max-width: 450px; 
+	word-break: break-word;
+}
 
 #menus
 {
