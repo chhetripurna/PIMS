@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="contactForm">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'patient-form',
@@ -18,109 +18,109 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	<table><tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'firstName'); ?>
-		<?php echo $form->textField($model,'firstName',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'firstName'); ?>
+		<td><?php echo $form->labelEx($model,'firstName'); ?></td>
+		<td><?php echo $form->textField($model,'firstName',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'firstName'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'middleName'); ?>
-		<?php echo $form->textField($model,'middleName',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'middleName'); ?>
+		<td><?php echo $form->labelEx($model,'middleName'); ?></td>
+		<td><?php echo $form->textField($model,'middleName',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'middleName'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'lastName'); ?>
-		<?php echo $form->textField($model,'lastName',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'lastName'); ?>
+		<td><?php echo $form->labelEx($model,'lastName'); ?></td>
+		<td><?php echo $form->textField($model,'lastName',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'lastName'); ?></td></tr>
 	</div>
-
+	</tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'suffix'); ?>
-		<?php echo $form->textField($model,'suffix',array('size'=>16,'maxlength'=>16)); ?>
-		<?php echo $form->error($model,'suffix'); ?>
+		<td><?php echo $form->labelEx($model,'suffix'); ?></td>
+		<td><?php echo $form->textField($model,'suffix',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->error($model,'suffix'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'DOB'); ?>
-		<?php echo $form->textField($model,'DOB'); ?>
-		<?php echo $form->error($model,'DOB'); ?>
+		<td><?php echo $form->labelEx($model,'DOB'); ?></td>
+		<td><?php echo $form->textField($model,'DOB'); ?>
+		<?php echo $form->error($model,'DOB'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'street'); ?>
-		<?php echo $form->textField($model,'street',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'street'); ?>
+		<td><?php echo $form->labelEx($model,'street'); ?></td>
+		<td><?php echo $form->textField($model,'street',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'street'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'city'); ?>
-		<?php echo $form->textField($model,'city',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'city'); ?>
+		<td><?php echo $form->labelEx($model,'city'); ?></td>
+		<td><?php echo $form->textField($model,'city',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'city'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'state'); ?>
-		<?php echo $form->textField($model,'state',array('size'=>2,'maxlength'=>2)); ?>
-		<?php echo $form->error($model,'state'); ?>
+		<td><?php echo $form->labelEx($model,'state'); ?></td>
+		<td><?php echo $form->textField($model,'state',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->error($model,'state'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'zipCode'); ?>
-		<?php echo $form->textField($model,'zipCode',array('size'=>5,'maxlength'=>5)); ?>
-		<?php echo $form->error($model,'zipCode'); ?>
+		<td><?php echo $form->labelEx($model,'zipCode'); ?></td>
+		<td><?php echo $form->textField($model,'zipCode',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'zipCode'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'homePhone'); ?>
-		<?php echo $form->textField($model,'homePhone',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'homePhone'); ?>
+		<td><?php echo $form->labelEx($model,'homePhone'); ?></td>
+		<td><?php echo $form->textField($model,'homePhone',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'homePhone'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'workPhone'); ?>
-		<?php echo $form->textField($model,'workPhone',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'workPhone'); ?>
+		<td><?php echo $form->labelEx($model,'workPhone'); ?></td>
+		<td><?php echo $form->textField($model,'workPhone',array('size'=>14,'maxlength'=>14)); ?>
+		<?php echo $form->error($model,'workPhone'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'cellPhone'); ?>
-		<?php echo $form->textField($model,'cellPhone',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'cellPhone'); ?>
+		<td><?php echo $form->labelEx($model,'cellPhone'); ?></td>
+		<td><?php echo $form->textField($model,'cellPhone',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'cellPhone'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'contact1Name'); ?>
-		<?php echo $form->textField($model,'contact1Name',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'contact1Name'); ?>
+		<td><?php echo $form->labelEx($model,'contact1Name'); ?></td>
+		<td><?php echo $form->textField($model,'contact1Name',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'contact1Name'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'contact1Num'); ?>
-		<?php echo $form->textField($model,'contact1Num',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'contact1Num'); ?>
+		<td><?php echo $form->labelEx($model,'contact1Num'); ?></td>
+		<td><?php echo $form->textField($model,'contact1Num',array('size'=>14,'maxlength'=>14)); ?>
+		<?php echo $form->error($model,'contact1Num'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'contact2Name'); ?>
-		<?php echo $form->textField($model,'contact2Name',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'contact2Name'); ?>
+		<td><?php echo $form->labelEx($model,'contact2Name'); ?></td>
+		<td><?php echo $form->textField($model,'contact2Name',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'contact2Name'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'contact2Num'); ?>
-		<?php echo $form->textField($model,'contact2Num',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'contact2Num'); ?>
+		<td><?php echo $form->labelEx($model,'contact2Num'); ?></td>
+		<td><?php echo $form->textField($model,'contact2Num',array('size'=>14,'maxlength'=>14)); ?>
+		<?php echo $form->error($model,'contact2Num'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'familyDoctor'); ?>
-		<?php echo $form->textField($model,'familyDoctor',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'familyDoctor'); ?>
+		<td><?php echo $form->labelEx($model,'familyDoctor'); ?></td>
+		<td><?php echo $form->textField($model,'familyDoctor',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'familyDoctor'); ?></td></tr>
 	</div>
-
+	</table>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

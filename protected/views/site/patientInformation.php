@@ -54,6 +54,8 @@ $this->breadcrumbs=array(
 		
 				array('label'=>'Patient Information', 'url'=>array('/site/patientInformation','id'=>$model->patientID), 'visible'=>Yii::app()->user->checkAccess('O')),
 
+				array('label'=>'Edit Patient Information', 'url'=>array('/patient/update','id'=>$model->patientID), 'visible'=>Yii::app()->user->checkAccess('O')),
+
 				array('label'=>'Billing', 'url'=>array('/site/billing','id'=>$model->patientID), 'visible'=>Yii::app()->user->checkAccess('O')),
 
 				array('label'=>'Treatment', 'url'=>array('/site/treatment','id'=>$model->patientID), 'visible'=>Yii::app()->user->checkAccess('D')),

@@ -19,19 +19,20 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-
+	<table>
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'item'); ?>
+		<td><?php echo $form->labelEx($model,'item'); ?>
 		<?php echo $form->textField($model,'item',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'item'); ?>
+		<?php echo $form->error($model,'item'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'amount'); ?>
+		<td><?php echo $form->labelEx($model,'amount'); ?>
 		<?php echo $form->textField($model,'amount',array('size'=>8,'maxlength'=>8)); ?>
-		<?php echo $form->error($model,'amount'); ?>
+		<?php echo $form->error($model,'amount'); ?></td></tr>
 	</div>
-
+	</table>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

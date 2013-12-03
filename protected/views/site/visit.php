@@ -2,6 +2,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name . ' - Billing';
+
 $this->breadcrumbs=array(
 	'Billing'=>array('billing', 'id'=>$model->patientID),
 	'Visit',
@@ -59,6 +60,7 @@ $this->breadcrumbs=array(
 	echo "<tr><th colspan=5>  <br>  </th></tr>";
 
 	echo "<tr><th colspan=5><h3><b>Visit Information</b></h3></th></tr>";
+	echo "<tr><th colspan=3><b>".CHtml::link("Edit Visit",array('/visit/update','id'=>$model->visitID))."</th></tr>";
 	echo "<tr><th>Admit Date</th><th>Discharge Date</th><th>Admit Reason</th></tr>";
 	echo "<tr><td>".CHtml::encode($model->admitDate)."</td><td>".CHtml::encode($model->dischargeDate)."</td><td>".CHtml::encode($model->admitReason)."</td></tr>";
 	echo "<tr><th colspan=5> <br> </th></tr>";

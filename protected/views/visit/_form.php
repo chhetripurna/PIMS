@@ -18,55 +18,55 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	<table><tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'admitDate'); ?>
+		<td><?php echo $form->labelEx($model,'admitDate'); ?></td><td>
 		<?php echo $form->textField($model,'admitDate'); ?>
-		<?php echo $form->error($model,'admitDate'); ?>
+		<?php echo $form->error($model,'admitDate'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'dischargeDate'); ?>
+		<td><?php echo $form->labelEx($model,'dischargeDate'); ?></td><td>
 		<?php echo $form->textField($model,'dischargeDate'); ?>
-		<?php echo $form->error($model,'dischargeDate'); ?>
+		<?php echo $form->error($model,'dischargeDate'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'admitReason'); ?>
+		<td><?php echo $form->labelEx($model,'admitReason'); ?></td><td>
 		<?php echo $form->textField($model,'admitReason',array('size'=>60,'maxlength'=>512)); ?>
-		<?php echo $form->error($model,'admitReason'); ?>
+		<?php echo $form->error($model,'admitReason'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'facility'); ?>
+		<td><?php echo $form->labelEx($model,'facility'); ?></td><td>
 		<?php echo $form->textField($model,'facility',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'facility'); ?>
+		<?php echo $form->error($model,'facility'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'floor'); ?>
+		<td><?php echo $form->labelEx($model,'floor'); ?></td><td>
 		<?php echo $form->textField($model,'floor'); ?>
-		<?php echo $form->error($model,'floor'); ?>
+		<?php echo $form->error($model,'floor'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'roomNum'); ?>
+		<td><?php echo $form->labelEx($model,'roomNum'); ?></td><td>
 		<?php echo $form->textField($model,'roomNum'); ?>
-		<?php echo $form->error($model,'roomNum'); ?>
+		<?php echo $form->error($model,'roomNum'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'bedNum'); ?>
+		<td><?php echo $form->labelEx($model,'bedNum'); ?></td><td>
 		<?php echo $form->textField($model,'bedNum'); ?>
-		<?php echo $form->error($model,'bedNum'); ?>
+		<?php echo $form->error($model,'bedNum'); ?></td></tr>
 	</div>
-
+	<tr>
 	<div class="row">
-		<?php echo $form->labelEx($model,'visitors'); ?>
+		<td><?php echo $form->labelEx($model,'visitors'); ?></td><td>
 		<?php echo $form->textField($model,'visitors',array('size'=>60,'maxlength'=>512)); ?>
-		<?php echo $form->error($model,'visitors'); ?>
+		<?php echo $form->error($model,'visitors'); ?></td></tr>
 	</div>
-
+	</table>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

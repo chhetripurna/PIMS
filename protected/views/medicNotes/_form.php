@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="contactForm">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'medic-notes-form',
