@@ -134,7 +134,7 @@ if($model->docNotes)
 
 if($model->medicNotes)
 {	
-	echo "<tr><th colspan=2>Note ID</th><th colspan=2>Note</th><th>Doctor Name</th></tr>";
+	echo "<tr><th colspan=2>Note ID</th><th colspan=2>Note</th><th>Medic Name</th></tr>";
 	
 	
 	foreach($model->medicNotes as $row){
