@@ -1,3 +1,6 @@
+Senior project, Fall 2013
+Instructor: Dr. Rick Coleman
+
 PIMS: Patient Information Managment System
 
 To use, put protected and yii in the SAME FOLDER AS YOUR DOCUMENT ROOT FOLDER!
